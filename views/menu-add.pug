@@ -1,0 +1,19 @@
+extends layout
+
+block layout-content
+    div.content
+        h1.page-title Add menu link
+        form(method="post", action="/menu/add/link").formContainer
+            div
+                label(for="wgt") Weight:
+                input(type="number", min="0", value=numLinks, id="wgt", name="weight")
+            div
+                label(for="href") URI:
+                input(type="text", id="href", name="href", placeholder="e.g. /mypage")
+            div
+                label(for="link-name") Name:
+                input(type="text", id="link-name", name="name", placeholder="e.g. About")
+            div
+                label(for="description") Description:
+                input(type="text", id="description", name="description", placeholder="e.g. enter description")
+            button(type="submit", value="add-link").addBtn Add link

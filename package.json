@@ -1,0 +1,20 @@
+{
+  "name": "lab2",
+  "version": "1.0.0",
+  "description": "Lab 2 Ecommerce Web",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index.js"
+  },
+  "author": "Sunny",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongo": "^0.1.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "keywords": []
+}

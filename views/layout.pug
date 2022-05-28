@@ -1,0 +1,41 @@
+doctype html 
+html 
+  head 
+    meta(charset="utf-8")
+    //print the title variable in the <title> element
+    //results in: <title>{title} | Test website</title>
+    title #{title} | TaskFlow
+    link(rel="stylesheet" href="/css/style.css")
+    script(src="https://kit.fontawesome.com/e67acba296.js" crossorigin="anonymous")
+  body
+    .flex-container
+      header
+        #sidenav
+          h2#site-name
+            i.fa-solid.fa-list-ol
+            //there should be no space between the element
+            //name and attribute parentheses
+            a(href="/") TaskFlow   
+          hr
+          ul
+            li 
+              i.fa-solid.fa-house
+              a(href="/") Home
+            li 
+              i.fa-solid.fa-user-gear
+              a(href="/menu/admin") Admin
+          footer#footer 
+            p &copy; Copyright Sunny Chung , 2022.
+      main#main 
+        .task
+          h2 Task List
+          ul 
+            //foreach loop to loop over links variable (passed from index.js)
+            each link in links
+              li 
+                a(href=link.href) #{link.name}
+                p #{link.description}
+                label.label-container
+                  input(type="checkbox").checkmark
+        block layout-content 
+        
